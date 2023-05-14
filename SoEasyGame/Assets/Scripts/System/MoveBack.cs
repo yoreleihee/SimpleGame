@@ -8,7 +8,7 @@ public class MoveBack : MonoBehaviour
 {
     [SerializeField] private float _moveSpeed = 10f;
     private Vector3 _back = Vector3.back;
-    private Vector3 _resetPosition = new Vector3(0,0,90);
+    private Vector3 _resetPosition = new Vector3(0,0,80);
 
     private void Update()
     {
