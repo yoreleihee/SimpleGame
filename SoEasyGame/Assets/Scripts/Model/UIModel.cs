@@ -1,4 +1,5 @@
 using UnityEngine;
+using Data;
 
 namespace Model
 {
@@ -15,7 +16,6 @@ namespace Model
             set
             {
                 _score = value;
-                Debug.Log(_score);
             }
         }
 
@@ -29,9 +29,10 @@ namespace Model
             }
             set
             {
-                _gauge = Mathf.Clamp(value, 0, 100);
-                Debug.Log(_gauge);
+                _gauge = Mathf.Clamp(value, 0, 1);
             }
         }
+
+        // private static ColorState.Colors _currentColor;
     }
 }
