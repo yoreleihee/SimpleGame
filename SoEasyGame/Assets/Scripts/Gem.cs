@@ -1,4 +1,3 @@
-using System;
 using System.Collections.Generic;
 using Data;
 using UnityEngine;
@@ -24,6 +23,7 @@ public class Gem : MonoBehaviour
     }
 
     private int _randomIndex;
+    private int _randomColorsIndex;
     private void OnEnable()
     {
         _randomIndex = Random.Range(0, _xPos.Length);
@@ -31,8 +31,8 @@ public class Gem : MonoBehaviour
         transform.position = new Vector3(randomX, INITIAL_POSITION_Y, INITIAL_POSITION_Z);
         
         // Color Change
-        _randomIndex = Random.Range(0, ColorData.Colors.Length);
-        _mesh.material.color = ColorData.Colors[_randomIndex];
+        _randomColorsIndex = Random.Range(0, ColorData.Colors.Length);
+        _mesh.material.color = ColorData.Colors[_randomColorsIndex];
     }
 
     private void OnTriggerEnter(Collider other)
@@ -40,9 +40,10 @@ public class Gem : MonoBehaviour
         if (other.CompareTag(TagString.PLAYER))
         {
             PlayerController playerController = other.GetComponent<PlayerController>();
-            if ((int)playerController.CurrentState == _randomIndex)
+            if ((int)UIModel.CurrrentColorState == _randomColorsIndex)
             {
                 GetScoreAndGauge();
+                Debug.Log("파란색 보석 먹음");
             }
             _stack.Push(this);
             gameObject.SetActive(false);

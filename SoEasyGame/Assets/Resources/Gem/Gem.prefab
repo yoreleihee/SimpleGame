@@ -112,7 +112,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _points: 100
-  _gaugeValue: 20
+  _gaugeValue: 0.2
 --- !u!114 &3661167202263248675
 MonoBehaviour:
   m_ObjectHideFlags: 0

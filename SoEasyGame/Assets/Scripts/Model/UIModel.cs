@@ -33,6 +33,18 @@ namespace Model
             }
         }
 
-        // private static ColorState.Colors _currentColor;
+        private static ColorData.ColorState _currentColorState;
+
+        public static ColorData.ColorState CurrrentColorState
+        {
+            get
+            {
+                return _currentColorState;
+            }
+            set
+            {
+                _currentColorState = value;
+            }
+        }
     }
 }
