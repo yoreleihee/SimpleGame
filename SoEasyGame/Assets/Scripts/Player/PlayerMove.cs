@@ -16,7 +16,7 @@ public class PlayerMove : MonoBehaviour
         _rigidbody = GetComponent<Rigidbody>();
     }
 
-    private void Update()
+    private void FixedUpdate()
     {
         _rigidbody.velocity = _moveDirection * _moveSpeed;
     }
