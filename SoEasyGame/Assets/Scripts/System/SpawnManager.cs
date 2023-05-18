@@ -10,7 +10,6 @@ public class SpawnManager : MonoBehaviour
     private Gem _gem;
     private Stack<Gem> _gemStack;
     [SerializeField] private int _numberOfGemsToCreate = 6;
-    
 
     private void Start()
     {
