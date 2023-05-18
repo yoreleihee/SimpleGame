@@ -43,7 +43,6 @@ public class Gem : MonoBehaviour
             if ((int)UIModel.CurrrentColorState == _randomColorsIndex)
             {
                 GetScoreAndGauge();
-                Debug.Log("파란색 보석 먹음");
             }
             _stack.Push(this);
             gameObject.SetActive(false);
